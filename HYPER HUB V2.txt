@@ -1,0 +1,256 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+local Player = game.Players.LocalPlayer
+ 
+--notifer user
+ 
+OrionLib:MakeNotification({
+	Name = "Logged in!",
+	Content = "You are logged in as "..Player.Name..".",
+	Image = "rbxassetid://99994054223025439998",
+	Time = 5
+})
+
+_G.Key = "HyperV2"
+_G.KeyImput = "string"
+
+function MakeScriptHub()
+    local Window = OrionLib:MakeWindow({Name = "Hyper Hub V2", HidePremium = false, SaveConfig = true, IntroEnabled = true, IntroText = "Hyper Hub V2"})
+end
+
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Correct Key",
+        Content = "You Have entered the correct key!",
+        Image = "rbxassetid://99994054223025439998",
+        Time = 5
+    })
+end
+
+function InCorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "InCorrect Key",
+        Content = "You Have entered the Incorrect key!",
+        Image = "rbxassetid://99994054223025439998",
+        Time = 5
+    })
+end
+
+ local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://99994054223025439",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+      	if _G.KeyInput == _G.Key then
+        MakeScriptHub()
+        CorrectKeyNotification()
+        else
+            InCorrectKeyNotification()
+		end
+  	end    
+})
+
+--tabs
+ 
+local Tab = Window:MakeTab({
+	Name = "Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+ 
+--"section"
+ 
+local Section = Tab:AddSection({
+	Name = "Universal script"
+})
+ 
+--button
+ 
+Tab:AddButton({
+	Name = "Shiftlock",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet('https://pastebin.com/raw/CjNsnSDy'))())
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Infinite yield",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))())
+  	end    
+})
+ 
+--section
+ 
+local Section = Tab:AddSection({
+	Name = "anime fighters simulator"
+})
+ 
+Tab:AddButton({
+	Name = "yutv hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))())
+  	end    
+})
+--section
+ 
+local Section = Tab:AddSection({
+	Name = "Blox Fruits"
+})
+ 
+Tab:AddButton({
+	Name = "Domadic Hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))())
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Miojo Hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/sumidassz/miojoHub/main/hub.lua", true))())
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Vector hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/VectorHub/main/Loader.lua"))())
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Redz Hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))())
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Bonez Hub",
+	Callback = function(exec)
+      		_G.English = true
+loadstring(game:HttpGet("https://paste.gg/p/anonymous/75487fb8949349828e4e4a91bfb8eb6e/files/6ebc9f2055f641fbb606ff494ac4ee53/raw"))()
+  	end    
+})
+-- section
+ 
+local Section = Tab:AddSection({
+	Name = "Muder Mystery 2"
+})
+ 
+Tab:AddButton({
+	Name = "Dark Cheat Client",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/loader.lua", true))())
+  	end    
+})
+ 
+Tab:AddButton({
+	Name = "Eclipse Hub (apenas no fluxus)",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))())
+  	end    
+})
+--section
+
+local Section = Tab:AddSection({
+	Name = "Blade Ball"
+})
+ 
+Tab:AddButton({
+	Name = "Bedol Hub",
+	Callback = function(exec)
+      		print(loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))())
+  	end    
+})
+ 
+local Section = Tab:AddSection({
+	Name = "Mais Scripts em Breve!!"
+})
+
+--pkayer slider
+ 
+local Tab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+ 
+Tab:AddSlider({
+	Name = "Velocidade",
+	Min = 16,
+	Max = 500,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WS",
+	Callback = function(Value)
+	      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+ 
+Tab:AddSlider({
+	Name = "Poder do Pulo",
+	Min = 50,
+	Max = 300,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "jump",
+	Callback = function(Value)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Reset"
+})
+
+Tab:AddButton({
+	Name = "Resetar Velocidade",
+	Callback = function()
+	      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16      		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Resetar Pulo",
+	Callback = function()
+	      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50      		
+  	end    
+})
+ 
+ 
+ --creditos
+ 
+local Tab = Window:MakeTab({
+	Name = "Créditos",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Nosso Servidor do Discord",
+	Callback = function()
+      		setclipboard("https://discord.gg/yuaN9bG8Mm") --This Will Copy The Link Of The Key
+  	end    
+}) 
+
+
+local Section = Tab:AddSection({
+	Name = "Qualquer Dúvida Entre em Contato em Nosso Server!!"
+})
+
+OrionLib:Init()
