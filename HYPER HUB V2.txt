@@ -1,10 +1,8 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
-local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local Window = OrionLib:MakeWindow({Name = "Hyper Hub", HidePremium = false, SaveConfig = true, IntroEnabled = false})
 local Player = game.Players.LocalPlayer
  
 --notifer user
- 
-
 --tabs
  
 local Tab = Window:MakeTab({
@@ -18,6 +16,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Universal script"
 })
+ 
  
 --button
  
